@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロフィール - マイホームページ</title>
+    <!-- 共通のCSSファイルを読み込む -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ヘッダー（トップページと同じもの） -->
+    <header>
+        <div class="header-container">
+            <h1 class="logo">My Profile</h1>
+            <nav class="nav-menu">
+                <ul>
+                    <!-- index.htmlに戻れるように設定 -->
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="profile.html" class="active">プロフィール</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- プロフィールメインコンテンツ -->
+    <main class="profile-container">
+        
+        <!-- 自己紹介エリア -->
+        <section class="profile-card">
+            <!-- 💡ここに後で自分の写真やイラストを入れられます -->
+            <div class="profile-icon">👤</div> 
+            
+            <h2>あなたの名前（またはニックネーム）</h2>
+            <p class="profile-job">Webディレクター / 趣味ブロガー</p>
+            <p class="profile-text">
+                はじめまして！ここに簡単な自己紹介を書いてください。<br>
+                普段やっていることや、このホームページを作ったきっかけなどを書くと親しみやすくなります。
+            </p>
+        </section>
+
+        <!-- 詳細情報エリア -->
+        <section class="profile-details">
+            <div class="detail-block">
+                <h3>🛠 スキル / できること</h3>
+                <ul>
+                    <li>HTML / CSS （勉強中！）</li>
+                    <li>動画編集</li>
+                    <li>写真撮影</li>
+                </ul>
+            </div>
+
+            <div class="detail-block">
+                <h3>❤️ 趣味</h3>
+                <p>旅行、カフェ巡り、ガジェット集め。休日はよく映画を観ています。</p>
+            </div>
+        </section>
+        </section>
+
+        <!-- 💡 ホームに戻るボタンを追加 -->
+        <div class="back-home-area">
+            <a href="index.html" class="profile-btn">← ホーム（トップ）に戻る</a>
+        </div>
+
+    </main>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy; 2026 My Website. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
