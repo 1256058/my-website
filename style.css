@@ -414,3 +414,110 @@ footer {
     height: 100%;
     object-fit: cover;       /* 縦横比を崩さずに綺麗に収める */
 }
+
+
+
+/* ===================================================
+   👤 プロフィール：コンパクトでオシャレな横並び（修正版）
+   =================================================== */
+
+/* 名前や基本情報の上のエリア */
+.profile-section {
+    text-align: center;
+    max-width: 600px;           /* 💡 全体の幅をきゅっと狭くしました */
+    margin: 0 auto 30px auto;
+}
+
+/* 👤 プロフィール写真（アイコン）のサイズを小さく上品に */
+.profile-avatar {
+    width: 120px;               /* 💡 160px から 120px にコンパクト化！ */
+    height: 120px;           
+    margin: 0 auto 15px auto;
+    border-radius: 8px;         /* 角丸四角形 */
+    overflow: hidden;        
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08); 
+    border: 3px solid #fff;  
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       
+}
+
+.profile-section h2 {
+    font-size: 1.5rem;          /* 文字も少し小さくしてバランス良く */
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.profile-job {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.profile-text {
+    line-height: 1.7;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* 💡【ここを修正】3つのボックスが広がりすぎないように最大幅を制限 */
+.profile-details {
+    display: flex;
+    flex-direction: row;        
+    justify-content: center;    /* 💡 中央に寄せる */
+    gap: 15px;                  /* すき間を少しきゅっと詰める */
+    max-width: 700px;           /* 💡 850px から 700px に狭くしてコンパクトに！ */
+    margin: 0 auto 50px auto;   
+}
+
+/* 3つのボックスの見た目 */
+.detail-block {
+    flex: 1;                    
+    max-width: 220px;           /* 💡 1つの箱の横幅を最大220pxに制限して、でかくなるのを防ぐ！ */
+    background: #fff;
+    border-radius: 8px;         
+    padding: 20px 15px;         /* 中の余白も少しスリムに */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
+    text-align: center;         
+}
+
+/* 各ブロックの見出し */
+.detail-block h3 {
+    color: #333;
+    font-size: 1rem;            /* 文字サイズを少し小さく */
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #f0f0f0; 
+}
+
+/* 箇条書き */
+.detail-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;      
+    text-align: left;           
+}
+
+.detail-block li {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+/* 📱 スマホ画面は縦並び */
+@media (max-width: 768px) {
+    .profile-details {
+        flex-direction: column; 
+        align-items: center;    /* スマホでも真ん中寄せ */
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    .detail-block {
+        max-width: 100%;        /* スマホの時は横幅いっぱいに広げる */
+        width: 100%;
+    }
+}
