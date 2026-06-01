@@ -297,3 +297,120 @@ footer {
         font-size: 1.1rem;
     }
 }
+
+
+/* ---- 🤝 推薦者のアイコンを写真にして丸く切り抜くデザイン ---- */
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* 綺麗な丸にする */
+    overflow: hidden;   /* はみ出た写真を隠す */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* 縦横比を崩さず中央で切り抜く */
+}
+
+
+/* ===================================================
+   🧭 長澤さんの想いエリア（文字幅・行間を読みやすく調整）
+   =================================================== */
+.my-thoughts {
+    background: #fff;              /* 背景を白にする */
+    padding: 50px 40px;            /* 内側のすき間を少し広げてゆとりを持たせる */
+    border-radius: 8px;            /* 角を少し丸くする */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* 優しい影 */
+    margin-bottom: 40px;           /* 下のパーツ（ふじぜみ）とのすき間 */
+    text-align: center;            /* 全体を中央揃えにする */
+}
+
+/* エリア内のタイトル（H3） */
+.my-thoughts h3 {
+    font-size: 1.4rem;             
+    margin-bottom: 35px;           /* タイトルと文章のすき間をしっかりあける */
+    color: #007bff;                
+}
+
+/* エリア内の文章（p）★ここを劇的に読みやすく修正しました！ */
+.my-thoughts p {
+    max-width: 650px;              /* 💡画面が大きくても横に広がりすぎないように制限 */
+    margin-left: auto;             /* 💡真ん中に寄せるためのお守り */
+    margin-right: auto;            /* 💡真ん中に寄せるためのお守り */
+    line-height: 1.7;              /* 行の間隔を「広すぎず狭すぎず」の黄金比に */
+    letter-spacing: 0.02em;        /* 💡文字幅が広がりすぎないようにキュッと引き締め */
+    margin-bottom: 1.5em;          /* 段落ごとのすき間を少し広めにとってスッキリ */
+    color: #333;                   
+    font-size: 1rem;               
+}
+
+/* ===================================================
+   🎓 ふじゼミヘッダー：背景に写真を敷くデザイン
+   =================================================== */
+.activity-header {
+    background-image: url('zenntai.jpg'); /* 💡 背景にしたい写真の名前 */
+    background-size: cover;                /* 縦横比を崩さず全体に広げる */
+    background-position: center;           /* 写真の中心を真ん中に合わせる */
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 8px;                    /* 角を少し丸くして他のボックスと合わせる */
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+/* 写真の上に半透明の黒いお布団を被せて、文字を白く目立たせる設定 */
+.header-overlay {
+    background: rgba(0, 0, 0, 0.5);        /* 💡 0.5 を 0.7にするともっと暗く、0.3にすると明るくなります */
+    padding: 60px 20px;                    /* 上下のすき間を広げて開放感を出す */
+    text-align: center;                    /* 中央揃え */
+}
+
+/* 文字の色を白ベースに変えて読みやすくする */
+.activity-header h2 {
+    color: #fff !important;                /* 文字を絶対白にする */
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* 文字に軽い影をつけてさらに読みやすく */
+}
+
+.activity-sub {
+    color: #eee !important;                /* 少しだけ優しい白 */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+
+/* ===================================================
+   📸 文字なし・写真を2枚コンパクトに飾るデザイン
+   =================================================== */
+/* 2枚の写真の間にすき間を作るための設定 */
+.feature-photo-container {
+    display: flex;
+    flex-direction: column;  /* 縦に並べる */
+    gap: 20px;               /* 💡 1枚目と2枚目の間のすき間（お好みで調整してください） */
+    margin-bottom: 40px;     /* 次のエリア（ふじぜみ等）とのすき間 */
+}
+
+.feature-photo-only {
+    max-width: 650px;        /* 横幅を文字の幅と合わせる */
+    height: 180px;           /* 写真の縦幅 */
+    width: 100%;             /* 横幅いっぱいに広げる（max-widthの650pxで止まります） */
+    margin-left: auto;       /* 真ん中寄せ */
+    margin-right: auto;      /* 真ん中寄せ */
+    border-radius: 8px;      /* 角を丸くする */
+    overflow: hidden;        /* 写真の角も丸く切り抜く */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* 優しい影 */
+}
+
+.feature-photo-only img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* 縦横比を崩さずに綺麗に収める */
+}
